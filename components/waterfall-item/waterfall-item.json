@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents":{
+    "exposure-reporter": "../exposure-statistics/exposure-statistics"
+  }
+}

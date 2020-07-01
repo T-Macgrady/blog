@@ -1,0 +1,26 @@
+<wxs src="../../../../wxs/wcommand.wxs" module="utils"></wxs>
+<view wx:if="{{!panel.hidden}}" class="panel" bind:tap="goDetail" bind:longpress="onLongPress" data-auto-statistics="{{ycArgs}}" data-gid="{{item.gid}}">
+  <!-- 封面 -->
+  <block wx:if="{{panel.cover && panel.cover.image}}">
+    <!-- 有下发宽高 -->
+    <image wx:if="{{panel.cover.height}}" class="panel__cover ui-image-default" style="height: {{panel.cover.height}}rpx" src="{{panel.cover.image}}" lazy-load mode="aspectFill">
+      <view class="panel__tag {{panel.tagClass}}" wx:if="{{panel.tagClass}}">{{panel.tag}}</view>
+    </image>
+    <!-- 未下发宽高，mode="widthFix" -->
+    <image wx:else class="panel__cover ui-image-default" src="{{panel.cover.image}}" lazy-load mode="widthFix">
+      <view class="panel__tag {{panel.tagClass}}" wx:if="{{panel.tagClass}}">{{panel.tag}}</view>
+    </image>
+  </block>
+  <!-- 标题-无封面5行省略 -->
+  <view class="panel__title {{panel.cover ? 'wordEllipsisNum2' : 'wordEllipsisNum5'}}" wx:if="{{panel.title}}">{{panel.title}}</view>
+  <!-- desc -->
+  <view class="panel__desc" wx:if="{{panel.desc}}">{{panel.desc}}</view>
+  <!-- 底部信息 -->
+  <view class="panel__footer" wx:if="{{panel.showFooter}}">
+    <image class="panel__footer-icon ui-ulogo-default" wx:if="{{panel.user.icon}}" src="{{panel.user.icon}}" lazy-load mode="aspectFill"></image>
+    <text class="panel__footer-name" wx:if="{{panel.user.nickname}}">{{panel.user.nickname}}</text>
+    <text class="panel__footer-comment" wx:if="{{panel.commentCount !== undefined}}">{{panel.commentCount}}评论</text>
+  </view>
+  <!-- 曝光埋点上报 -->
+  <exposure-reporter wx:if="{{!panel.noExposure}}" statistics-id="{{585}}" args="{{ycArgs}}" has-page-show />
+</view>

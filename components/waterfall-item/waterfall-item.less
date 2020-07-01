@@ -1,0 +1,147 @@
+@import "src/less/tool";
+@import "src/less/component/image";
+
+.panel {
+  position: relative;
+  width: 100%;
+  margin-bottom: 28rpx;
+  overflow: hidden;
+
+  &__cover {
+    position: relative;
+    width: 354rpx;
+    height: 354rpx;
+    border-radius: 12rpx;
+  }
+
+  &__title {
+    margin: 12rpx 12rpx 0;
+    font-family: PingFangSC-Semibold;
+    font-size: 26rpx;
+    color: #262626;
+    letter-spacing: 0;
+    line-height: 40rpx;
+    font-weight: bold;
+    text-align: left;
+
+    &.wordEllipsisNum2 {
+      max-height: 80rpx;
+      .wordEllipsisNum(2);
+    }
+
+    &.wordEllipsisNum5 {
+      .wordEllipsisNum(5);
+        max-height: 200rpx;
+      }
+  }
+
+  &__desc {
+    display: inline-block;
+    margin: 12rpx 12rpx 0;
+    height: 34rpx;
+    padding: 0 12rpx;
+    background: #F6F8FA;
+    border-radius: 17rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 22rpx;
+    color: #A6A7A9;
+    letter-spacing: 0;
+    line-height: 34rpx;
+    .wordEllipsis();
+  }
+
+  &__footer {
+    margin: 12rpx 12rpx 16rpx;
+    .flex();
+    align-items: center;
+    font-family: PingFangSC-Regular;
+    font-size: 22rpx;
+    color: #676767;
+    letter-spacing: 0;
+    line-height: 34rpx;
+
+    &-icon {
+      flex-shrink: 0;
+      .WH(36rpx);
+      margin-right: 12rpx;
+      border-radius: 50%;
+    }
+
+    &-name {
+      flex-shrink: 0;
+      max-width: 160rpx;
+      .wordEllipsis();
+    }
+
+    &-comment {
+      flex: 1;
+      text-align: right;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    bottom: 12rpx;
+    left: 12rpx;
+    height: 34rpx;
+    max-width: 326rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 22rpx;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 34rpx;
+    padding: 0 12rpx 0 40rpx;
+    border-radius: 17rpx;
+    background-position: 8rpx 5rpx;
+    background-size: 24rpx 24rpx;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-radius: 17rpx;
+    background-color: rgba(0, 0, 0, 0.4);
+    .wordEllipsis();
+
+    &.video {
+      position: absolute;
+      bottom: initial;
+      left: initial;
+      top: 12rpx;
+      right: 12rpx;
+      .WH(40rpx);
+      padding: 0;
+      background-color: transparent;
+      background-image: url(https://img.suv666.com/ui/ycyh/4_0/btn_video_play_0617.png);
+      background-position: center center;
+      background-size: 100% 100%;
+    }
+
+    &.praise {
+      background-image: url(https://img.suv666.com/ui/ycyh/4_0/news/icon_flow_koubei_h24.png);
+    }
+
+    &.news {
+      background-image: url(https://img.suv666.com/ui/ycyh/4_0/news/icon_flow_post_h24.png);
+    }
+
+    &.topic {
+      background-image: url(https://img.suv666.com/ui/ycyh/4_0/news/icon_flow_topic_h24.png);
+    }
+
+    &.live {
+      background-image: url(https://img.suv666.com/ui/ycyh/4_0/news/icon_live_h24.png);
+    }
+
+    &.column {
+      background-image: url(https://img.suv666.com/ui/ycyh/4_0/news/icon_flow_lanmu_h24.png);
+    }
+
+    &.ad {
+      padding: 0 16rpx;
+    }
+  }
+}
+
+
+.test {
+  position: absolute;
+  z-index: 10;
+}

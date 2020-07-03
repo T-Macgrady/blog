@@ -3,7 +3,8 @@
 ## Introduction
 
 - wx.request 的配置、axios 的调用方式
-- [源码戳我](https://github.com/T-Macgrady/blog/tree/master/request)
+- [----------------源码戳我---------------](https://github.com/T-Macgrady/blog/tree/master/request)
+- [---------------demo 戳我--------------](https://developers.weixin.qq.com/s/GiZbmymu7LiH)
 
 ## feature
 

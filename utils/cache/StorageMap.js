@@ -1,6 +1,7 @@
 export default class StorageMap {
   static getCacheName(name) {
-    return `${INJECTION_FROM_WEBPACK.serverType}iyourcar_cache_${name}`;
+    // INJECTION_FROM_WEBPACK.serverType用户区分当前环境
+    return `${"INJECTION_FROM_WEBPACK.serverType"}iyourcar_cache_${name}`;
   }
   get(name) {
     let storageData = null;
